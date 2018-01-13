@@ -52,3 +52,7 @@ Extra Goals
         prompt for new category
 
     breakfast/lunch/dinner
+
+    prompt response and rating once a venue is rated
+
+    random restautant chooser based on "cuisine" which is never observed in user history
