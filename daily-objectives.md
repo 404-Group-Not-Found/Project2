@@ -8,6 +8,12 @@ Saturday 13 Jan 2018
 - Develop basic front-end layout objectives 
     - straight-forward to get started
     - design for mobile first
+    - make simple logo
+    - decide on final app name
+        - dinder/brinder
+        - render/rinder
+        - best breakfast tacos
+        - 
 
 
 - Choose relevant frameworks and file structure
@@ -28,7 +34,3 @@ Saturday 13 Jan 2018
     - Zomato
     - Yelp
     - Ensure safety of API keys, etc.
-
-
-
-
