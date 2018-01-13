@@ -1,4 +1,4 @@
-Saturday 13 Jan 2018
+* Saturday 13 Jan 2018
 
 
 - Develop merge conflict protocols and repository control SOPs
