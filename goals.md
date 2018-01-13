@@ -7,8 +7,9 @@ what it does:
     help user decide where to eat locally 
         in a certain category
     compare restaurants, pass/fail 
-    or skip/satisfied
-    save results
+    or skip
+    or satisfied
+    save results in user table
 
     top five restaurants per user
     top five per category
@@ -26,11 +27,28 @@ what it looks like:
             UserName
             Location
 
-
     2nd Main View:
-        Modal: Select Category, and/or breakfast, lunch, dinner
+        Modal: Select Category
 
-        Bring in 2 restaraunt as tiles
-        drop down menu for Account details
-        Top 5
-        
+        Display  2 restaraunt
+
+        drop down menu for 
+            Account details
+            Top 5
+            sign out
+
+    Backend:
+        server:
+            Tables: 
+                Users
+                    Locations
+                        Categories
+                            Restaurants with ratings
+
+
+Extra Goals
+    15 second timer for indecisive people?
+        change choices
+        prompt for new category
+
+    breakfast/lunch/dinner
