@@ -21,13 +21,13 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+// Requiring our models for syncing
+var db = require("./models");
+
 // Import routes and give the server access to them.
 //
-require("./public/routes/api-routes.js");
-require("./public/routes/html-routes.js")
-
-app.use(apiRoutes);
-app.use(htmlRoutes);
+require("./public/routes/api-routes.js")(app);
+require("./public/routes/html-routes.js")(app)
 
 
 db.sequelize.sync({ force: true }).then(function() {
