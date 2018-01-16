@@ -23,8 +23,8 @@ module.exports = function(app) {
   });
 
   // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+  app.get("/toast", function(req, res) {
+    res.render("swyppa");
   });
 
   // blog route loads blog.html
