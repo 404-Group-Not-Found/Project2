@@ -16,7 +16,10 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    var data = {
+      quote: 'This is first Toast.'
+    };
+    res.render("index", data);
   });
 
   // cms route loads cms.html
