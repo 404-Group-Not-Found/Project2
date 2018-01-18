@@ -14,3 +14,7 @@ form input {
     background: #9696e285;
     padding: 20px;
 }
+
+#cycleBg{
+    z-index: -1;
+};
