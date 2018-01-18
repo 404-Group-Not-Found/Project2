@@ -10,7 +10,7 @@ form input {
     padding: 5px;
 }
 #heading {
-    color:#800000;
+    color:#724d4d;
     text-align: center;
 }
 .modal-dialog {
@@ -35,7 +35,21 @@ form input {
     height: 100vh;
     width: 100%;
 }
-
-#cycleBg{
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
     z-index: -1;
+  }
+.carousel-inner::after{
+    content: "";
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
 }
