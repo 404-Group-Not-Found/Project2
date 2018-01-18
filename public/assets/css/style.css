@@ -1,3 +1,16 @@
 #testing{
     color: powderblue;
 };
+/*===================== Form Styles ================*/
+form input {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.modal-dialog {
+    background: #9696e285;
+    padding: 20px;
+}
