@@ -1,4 +1,4 @@
-Goals for Porject!
+Goals for Project!
 
 Tinderish Restuarant Comparison App
 
