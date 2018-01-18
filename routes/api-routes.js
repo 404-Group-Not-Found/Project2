@@ -1,6 +1,6 @@
 // this file will be utilized to post information to the database
 
-var db = require("../../models");
+var db = require("../models");
 
 module.exports = function(app) {
     app.get("/api/authors", function(req, res) {
