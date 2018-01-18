@@ -2,10 +2,19 @@
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
       // Giving the Author model a name of type STRING
-      name: DataTypes.STRING,
-      password: DataTypes.STRING
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+      },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+      }
     });
   
+ 
     // Author.associate = function(models) {
     //   // Associating Author with Posts
     //   // When an Author is deleted, also delete any associated Posts
