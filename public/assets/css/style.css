@@ -58,3 +58,19 @@ form input {
     position: absolute;
     z-index: 1;
 }
+
+/* position carousels adjacent to each other */
+#carousel-left {
+    /* display: inline; */
+    width: 50%;
+    float: left;
+}
+#carousel-right {
+    /* display: inline; */
+    width: 50%;
+    float: right;
+}
+#navButtons{
+    clear: both;
+    display: block;
+}
