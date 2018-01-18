@@ -63,11 +63,13 @@ form input {
 #carousel-left {
     /* display: inline; */
     width: 50%;
+    height: 75vh;
     float: left;
 }
 #carousel-right {
     /* display: inline; */
     width: 50%;
+    height: 75vh;
     float: right;
 }
 #navButtons{
