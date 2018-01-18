@@ -1,6 +1,6 @@
 #testing{
     color: powderblue;
-};
+}
 /*===================== Form Styles ================*/
 form input {
     display: inline-block;
@@ -9,16 +9,25 @@ form input {
     margin: 5px;
     padding: 5px;
 }
-
+#heading {
+    color:#800000;
+    text-align: center;
+}
 .modal-dialog {
-    background: #9696e285;
+    background: #00000085;
     padding: 20px;
 }
 .panel {
+    width: 100vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#standard{
+    text-align: center;
+    /* margin: 5px;
+    padding: 5px; */
 }
 
 .container {
@@ -29,4 +38,4 @@ form input {
 
 #cycleBg{
     z-index: -1;
-};
+}
