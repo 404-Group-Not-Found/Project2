@@ -10,13 +10,14 @@ form input {
     padding: 5px;
 }
 #heading {
-    color:#724d4d;
+    color:#ccb046;
     text-align: center;
 }
 .modal-dialog {
     background: #00000085;
     padding: 20px;
 }
+/* positioning and styling login modal */
 .panel {
     width: 100vw;
     position: absolute;
@@ -29,12 +30,16 @@ form input {
     /* margin: 5px;
     padding: 5px; */
 }
+.links {
+    color: #ccb046;
+}
 
 .container {
     position: absolute;
     height: 100vh;
     width: 100%;
 }
+/* modifying the transparency of background carousel */
 .carousel-inner {
     width: 100%;
     height: 100%;
