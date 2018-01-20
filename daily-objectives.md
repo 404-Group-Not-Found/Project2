@@ -34,3 +34,10 @@
     - Zomato
     - Yelp
     - Ensure safety of API keys, etc.
+
+* Saturday Jan 20 2018
+    - ABF - registration, unique users, work on BG for register page
+    - NV - swiping functionality, login page logo, API Data
+    - JS - session data, server routes.
+
+    - keep in mind, server routes, css, all these things can overlap so post if there are big changes 
