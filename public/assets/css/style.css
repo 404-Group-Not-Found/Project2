@@ -1,6 +1,24 @@
 #testing{
     color: powderblue;
 }
+/*======================== Login page background Styles ==================*/
+#login {
+    width: 100%;
+    padding: 0;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-item img.d-block.img-fluid {
+    position: absolute;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100vh;
+}
+
 /*===================== Form Styles ================*/
 form input {
     display: inline-block;
