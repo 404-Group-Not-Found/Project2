@@ -19,6 +19,7 @@ module.exports = function(app) {
     var data = {
       quote: 'This is first Toast.'
     };
+    
     res.render("index", data);
   });
 
@@ -34,11 +35,6 @@ module.exports = function(app) {
 
   app.get("/register", function(req, res) {
     res.render("register");
-  });
-
-  // authors route loads author-manager.html
-  app.get("/authors", function(req, res) {
-    // res.sendFile(path.join(__dirname, "../public/author-manager.html"));
   });
 
 };
