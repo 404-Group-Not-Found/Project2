@@ -59,18 +59,11 @@ form input {
     z-index: 1;
 }
 
-/* position carousels adjacent to each other */
-#carousel-left {
+/* carousel login style */
+#carousel-login {
     /* display: inline; */
-    width: 50%;
-    height: 75vh;
-    float: left;
-}
-#carousel-right {
-    /* display: inline; */
-    width: 50%;
-    height: 75vh;
-    float: right;
+    width: 100vw;
+    height: 100vh;
 }
 #navButtons{
     clear: both;
