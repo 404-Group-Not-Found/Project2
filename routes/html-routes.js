@@ -20,7 +20,7 @@ module.exports = function(app) {
       quote: 'This is first Toast.'
     };
     
-    res.render("index", data);
+    res.render("login", data);
   });
 
   // loads the swyppa page
@@ -29,9 +29,9 @@ module.exports = function(app) {
   });
 
   // loads the login page
-  app.get("/login", function(req, res) {
-    res.render("login");
-  });
+  // app.get("/login", function(req, res) {
+  //   res.render("login");
+  // });
 
   // loads the register page
   app.get("/register", function(req, res) {
