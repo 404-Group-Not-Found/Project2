@@ -16,11 +16,7 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    var data = {
-      quote: 'This is first Toast.'
-    };
-    
-    res.render("login", data);
+    res.render("login");
   });
 
   // loads the swyppa page
@@ -29,9 +25,9 @@ module.exports = function(app) {
   });
 
   // loads the login page
-  // app.get("/login", function(req, res) {
-  //   res.render("login");
-  // });
+  app.get("/login", function(req, res) {
+    res.render("login");
+  });
 
   // loads the register page
   app.get("/register", function(req, res) {
