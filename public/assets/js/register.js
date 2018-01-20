@@ -24,6 +24,20 @@ $(document).ready(function() {
             .then();
     }
 
+    var inputData;
+
+    $("#testSubmit").click(function(){
+        inputData = $('form').serializeArray();
+        console.log(inputData);
+    });
+    function testDisplay(inputData){
+        document.getElementById("testerDiv").innerHtml = inputData;
+
+    }
+        var test = document.getElementById("testSubmit");
+        test.addEventListener("click", testDisplay());
+
+
 
 
 })
