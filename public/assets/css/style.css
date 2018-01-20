@@ -25,7 +25,7 @@ form input {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#standard{
+.standard{
     text-align: center;
     /* margin: 5px;
     padding: 5px; */
