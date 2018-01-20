@@ -1,4 +1,10 @@
-var client = require("./keys.js");
+var keys = require("./keys.js");
+
+var zomato = require('zomato');
+
+var client = zomato.createClient({
+    userKey: keys.zomatoKey
+});
 
 var Zomato = {
 
