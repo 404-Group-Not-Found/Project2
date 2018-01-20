@@ -23,16 +23,17 @@ module.exports = function(app) {
     res.render("index", data);
   });
 
-  // cms route loads cms.html
-  app.get("/toast", function(req, res) {
+  // loads the swyppa page
+  app.get("/swyppa", function(req, res) {
     res.render("swyppa");
   });
 
-  // blog route loads blog.html
+  // loads the login page
   app.get("/login", function(req, res) {
     res.render("login");
   });
 
+  // loads the register page
   app.get("/register", function(req, res) {
     res.render("register");
   });
