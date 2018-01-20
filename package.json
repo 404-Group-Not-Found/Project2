@@ -22,6 +22,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "mysql2": "^1.5.1",
-    "sequelize": "^4.31.1"
+    "sequelize": "^4.31.1",
+    "zomato": "^1.1.0"
   }
 }
