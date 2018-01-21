@@ -52,7 +52,7 @@ $(document).ready(function() {
         // log the data we found
         console.log(data);
         // tell the user we're adding a character with an alert window
-        alert("Adding user...");
+        console.log("Adding user...");
         });
         $("#name").val("");
         $("#pass").val("");

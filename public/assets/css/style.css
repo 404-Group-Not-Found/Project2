@@ -27,7 +27,7 @@ form input {
     margin: 5px;
     padding: 5px;
 }
-#heading {
+.heading {
     color:#ccb046;
     text-align: center;
 }
@@ -57,7 +57,7 @@ form input {
     height: 100vh;
     width: 100%;
 }
-/* modifying the transparency of background carousel */
+/* modifying the transparency of login background carousel */
 .carousel-inner {
     width: 100%;
     height: 100%;
@@ -86,4 +86,10 @@ form input {
 #navButtons{
     clear: both;
     display: block;
+}
+
+/* registration page modal and BG */
+#testSubmit{
+    background-color: #ccb046;
+    border-color: #ccb046;
 }
