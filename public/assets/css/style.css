@@ -45,11 +45,20 @@ form input {
 }
 .standard{
     text-align: center;
-    /* margin: 5px;
-    padding: 5px; */
+    margin: 5px;
+    padding: 5px;
 }
 .links {
     color: #ccb046;
+    text-decoration: none;
+}
+.links:hover {
+    color:  #927d31;
+    text-decoration: none;
+}
+.links:active {
+    color:  #ebc94e;
+    text-decoration: none;
 }
 
 .container {
@@ -92,4 +101,7 @@ form input {
 #testSubmit{
     background-color: #ccb046;
     border-color: #ccb046;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
 }
