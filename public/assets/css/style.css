@@ -127,6 +127,23 @@ form input {
 #testSubmit:active{
     color:  #ebc94e;  
 }
+#register {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: relative;
+  }  
+#register::after {
+    content: "";
+    background: url("/assets/img/registrationBG.jpeg");
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
 
 /*swyppa page nav & BG */
 .swyppaback {
