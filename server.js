@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 
 app.use(bodyParser.json());
-
+app.use(session({secret:"obiwan kanobi"}));
 
 // Set Handlebars.
 var exphbs = require("express-handlebars");

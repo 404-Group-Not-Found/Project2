@@ -7,7 +7,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
-
+var session = require("express-session");
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -16,7 +16,16 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.render("login");
+    var ssn = req.session;
+
+    if (!ssn.username) {
+      res.redirect("login");
+      return
+    }
+
+    console.log("Logged in user:", ssn.username);
+
+    res.render("swyppa");
   });
 
   // loads the swyppa page
@@ -26,6 +35,13 @@ module.exports = function(app) {
 
   // loads the login page
   app.get("/login", function(req, res) {
+    var ssn = req.session;
+
+    if (ssn.username) {
+      res.redirect('/');
+      return
+    }
+    
     res.render("login");
   });
 
