@@ -19,6 +19,7 @@
     height: 100vh;
 }
 
+
 /*===================== Form Styles ================*/
 form input {
     display: inline-block;
@@ -28,7 +29,7 @@ form input {
     padding: 5px;
 }
 .heading {
-    color:#ccb046;
+    color:#ebc94e;
     text-align: center;
 }
 .modal-dialog {
@@ -36,12 +37,25 @@ form input {
     padding: 20px;
 }
 /* positioning and styling login modal */
+.logo {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 800%;
+    color: #ebc94e;
+    -webkit-text-stroke: .1px black; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
 .panel {
     width: 100vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-text-stroke: .1px black;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .standard{
     text-align: center;
@@ -49,11 +63,13 @@ form input {
     padding: 5px;
 }
 .links {
-    color: #ccb046;
+    color: #ebc94e;
     text-decoration: none;
+    -webkit-text-stroke: .1px black;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 .links:hover {
-    color:  #927d31;
+    color:  #fcfbfa;
     text-decoration: none;
 }
 .links:active {
@@ -99,14 +115,14 @@ form input {
 
 /* registration page modal and BG */
 #testSubmit{
-    background-color: #ccb046;
-    border-color: #ccb046;
+    background-color: #ebc94e;
+    border-color: #ebc94e;
     padding: 5px;
     margin: 5px;
     width: 100%;
 }
 #testSubmit:hover{
-    color:  #927d31;
+    color:  #fcfbfa;
 }
 #testSubmit:active{
     color:  #ebc94e;  
