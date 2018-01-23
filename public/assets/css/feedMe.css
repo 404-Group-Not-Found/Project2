@@ -1,5 +1,5 @@
 
-#container {
+#swipe-container {
     width: 500px;
     margin: auto !important;
     display: block;
@@ -14,12 +14,10 @@
     user-select: none;
   }
   .buddy {
-    display: none;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     color: #fff;
-    padding: 20px;
     width: 360px;
     height: 360px;
     top: 50px;
