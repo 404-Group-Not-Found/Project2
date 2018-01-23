@@ -77,10 +77,10 @@ var Zomato = {
         });
     },
 
-    getGeocode: function () {
+    getGeocode: function (latitude, longitude) {
         client.getGeocode({
-            lat: "28.613939", //latitude 
-            lon: "77.209021" //longitude 
+            lat: latitude, //latitude 
+            lon: longitude //longitude 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));

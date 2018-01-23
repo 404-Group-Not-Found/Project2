@@ -1,3 +1,5 @@
+var Zomato = require("./zomatoAPI.js");
+
 function initTinder(callback) {
   $("body").on("swiperight", ".buddy", function(event){
     $(this).addClass('rotate-left').delay(700).fadeOut(1);
