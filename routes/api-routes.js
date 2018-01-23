@@ -30,7 +30,7 @@ module.exports = function(app) {
     });
     
     //andrews register route
-    app.post("/api/new", function(req, res) {
+    app.post("/api/username", function(req, res) {
       db.User.create(req.body).then(function(dbUser) {
         res.json(dbUser);
       });
