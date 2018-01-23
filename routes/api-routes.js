@@ -3,23 +3,10 @@
 var db = require("../models");
 
 module.exports = function(app) {
-    app.get("/api/authors", function(req, res) {
-      // Here we add an "include" property to our options in our findAll query
-      // We set the value to an array of the models we want to include in a left outer join. In this case, just db.Post
-      db.Author.findAll({
-        include: [db.Post]
-      }).then(function(dbAuthor) {
-        res.json(dbAuthor);
-      });
-    });
-  
-    app.get("/api/user/:username", function(req, res) {
+   
+    app.get("/api/username/:username", function(req, res) {
       // Here we add an "include" property to our options in our findOne query
       // We set the value to an array of the models we want to include in a left outer join
-      // In this case, just db.Post
-
-      console.log(req.params);
-      
       db.User.findOne({
         where: {
           name: req.params.username
@@ -28,6 +15,7 @@ module.exports = function(app) {
         res.json(dbUser);
       });
     });
+    
     
     //andrews register route
     app.post("/api/username", function(req, res) {
