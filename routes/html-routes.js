@@ -47,6 +47,13 @@ module.exports = function(app) {
 
   // loads the register page
   app.get("/register", function(req, res) {
+    var ssn = req.session;
+
+    if (ssn.username) {
+      res.redirect('/');
+      return
+    }
+    
     res.render("register");
   });
 
