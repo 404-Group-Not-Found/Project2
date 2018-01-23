@@ -13,20 +13,23 @@ module.exports = function(app) {
       });
     });
   
-    app.get("/api/authors/:id", function(req, res) {
+    app.get("/api/user/:username", function(req, res) {
       // Here we add an "include" property to our options in our findOne query
       // We set the value to an array of the models we want to include in a left outer join
       // In this case, just db.Post
-      db.Author.findOne({
+
+      console.log(req.params);
+      
+      db.User.findOne({
         where: {
-          id: req.params.id
-        },
-        include: [db.Post]
-      }).then(function(dbAuthor) {
-        res.json(dbAuthor);
+          name: req.params.username
+        }
+      }).then(function(dbUser) {
+        res.json(dbUser);
       });
     });
-  
+    
+    //andrews register route
     app.post("/api/new", function(req, res) {
       db.User.create(req.body).then(function(dbUser) {
         res.json(dbUser);
