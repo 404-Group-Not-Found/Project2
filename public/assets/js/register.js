@@ -59,7 +59,6 @@ $(document).ready(function() {
                 $("#name").val("");
                 $("#pass").val("");
                 $("#noToast").text(`Sorry, ${newUser.name} is taken.`);
-                // here can be error handler. if id is present, then don't allow it to make a user. If it makes an ID and/user then call the post function and clear everything and send to the /swyppa page
                 } else {
                     post()
                 }
