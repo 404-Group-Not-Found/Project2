@@ -19,7 +19,7 @@ $(document).ready(function() {
             // instead of using setTimeout and getting the img URL from the hardcoded array of nextImgURLs, you'll get the image from your API
             setTimeout(function(){
                 /* REPLACE CODE BELOW HERE */
-                if (current > 7) {
+                if (current > 5) {
                     return;
                 }
                 nextImgURL = nextImgURLs[current];
