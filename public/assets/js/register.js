@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    console.log("I am register.js");
-
     //collect clean form data on submission and send to database
     $("#testSubmit").click(function(){
         event.preventDefault();
@@ -49,18 +47,6 @@ $(document).ready(function() {
         // log the data we found
             var parsedData = JSON.stringify(data);
             console.log(`Adding User: ${parsedData}`);
-        // --------->>>>> add here. If parsedData is undefined (because the sequelize validation works although it throws an error in terminal) then put an alert or prompt or something to tell the user to enter a new name. It is undefined. you can even capture the value of the input field and just put it into a div somewhere and say "this username is taken"
-            // if ( parsedData === null || parsedData === undefined){
-            //     $("#noToast").text(`Sorry, ${newUser.name} is taken.`);
-            //     $("#name").val("");
-            //     $("#pass").val("");
-            //     return;
-            // } else {
-            //     testDisplay();
-            //     $("#name").val("");
-            //     $("#pass").val("");   
-            // }
-        // tell the user we're adding a user
             }); 
             createSession(); 
         };

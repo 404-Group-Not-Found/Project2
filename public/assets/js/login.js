@@ -12,7 +12,7 @@ $(document).ready(function() {
         };
         console.log(credentials);
 
-        $.get('/api/user/' + credentials.username, function(data) {
+        $.get('/api/username/' + credentials.username, function(data) {
 
             //if data returned:
             console.log(data);    
