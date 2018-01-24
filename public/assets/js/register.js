@@ -68,7 +68,8 @@ $(document).ready(function() {
         };
 
         function createSession(){
-            
+            sessionStorage.setItem("username", newUser.name);
+            window.location.replace("/swyppa");
         };
             
     
