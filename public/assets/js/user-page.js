@@ -2,10 +2,13 @@ $(document).ready(function() {
     // some hard coded images--these will come from the API instead of being hardcoded here
     var current = 0;
     var nextImgURLs = [
-        "https://1.bp.blogspot.com/_qEbjiFbQWGM/TCBVlN3mkYI/AAAAAAAADCM/7CjYqUHwbgY/s1600/workshop_modell_0126.jpg",
-        "http://static.stylemagazin.hu/medias/29280/Nem-ehezik-a-Women-of-the-Year-legjobb-modell-dijara-eselyes-szepseg_32fc7c86954a8847610499a0fc7261e2.jpg",
-        "http://w1nd.cc/promo/347.jpg",
-        "http://hircsarda.hu/wp-content/uploads/2016/03/orban1.jpeg"
+        "/assets/img/chinese1.jpg",
+        "/assets/img/chinese2.jpg",
+        "/assets/img/chinese3.jpg",
+        "/assets/img/chinese4.jpg",
+        "/assets/img/thai1.png",
+        "/assets/img/thai2.jpg"
+
     ];
 
     var pullNextImage = function(numToPull) {
@@ -16,11 +19,11 @@ $(document).ready(function() {
             // instead of using setTimeout and getting the img URL from the hardcoded array of nextImgURLs, you'll get the image from your API
             setTimeout(function(){
                 /* REPLACE CODE BELOW HERE */
-                if (current > 3) {
+                if (current > 7) {
                     return;
                 }
                 nextImgURL = nextImgURLs[current];
-                current++
+                current++;
                  /* REPLACE CODE ABOVE HERE */
     
                 // Once you have the next image's URL you can call addTinderCard to create a new tinder card for it

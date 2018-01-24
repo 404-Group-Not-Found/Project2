@@ -43,7 +43,7 @@ function addTinderCard(imgURL) {
     
   // create a new card with the image div inside of it
   var swipableDiv = $("<div class='buddy'>");
-  var img = $("<div class='avatar' style='display: block; background-image: url(" + imgURL + ")'>");
+  var img = $("<div class='avatar' style='display: block; background-image: url(" + imgURL + "); background-size: cover!important;'>");
 
   // add the image to the swipable card
   swipableDiv.append(img);
