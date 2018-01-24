@@ -231,3 +231,8 @@ form input {
 .ui-textinput.ui-corner-all.ui-shadow-inset.ui-textinput-text.ui-body-inherit {
     background: transparent;
  }
+
+ 
+ .ui-page-theme-a a{
+    color: #ebc94e!important;
+ }
