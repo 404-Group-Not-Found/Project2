@@ -223,3 +223,7 @@ form input {
     position: absolute;
     z-index: -1;
  }
+
+ .ui-page-theme-a{
+    background: transparent;
+}
