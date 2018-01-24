@@ -3,7 +3,7 @@
     width: 500px;
     margin: auto !important;
     display: block;
-    height: 500px;
+    
     position: relative;
     list-style-type: none;
     -webkit-touch-callout: none;
@@ -77,3 +77,19 @@
     left: 40px;
     text-shadow: none;
   }
+
+  .ui-textinput.ui-corner-all.ui-shadow-inset.ui-textinput-text.ui-body-inherit {
+    background: transparent;
+ }
+
+ .ui-loader-icon.ui-icon-loading {
+  background-color: #00000005;
+ }
+
+ .ui-loader.ui-corner-all.ui-loader-default.ui-body-a {
+   background: transparent;
+ }
+
+ .ui-loader-header {
+   background: transparent;
+ }
