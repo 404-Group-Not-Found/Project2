@@ -12,7 +12,8 @@ module.exports = function(app) {
           name: req.params.username
         }
       }).then(function(dbUser) {
-        res.json(dbUser);
+        res.json("ok");
+
       });
     });
     
