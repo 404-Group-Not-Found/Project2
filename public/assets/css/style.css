@@ -236,3 +236,7 @@ form input {
  .ui-page-theme-a a{
     color: #ebc94e!important;
  }
+
+ input#loginUser, input#loginPass {
+    background: #fff;
+}
