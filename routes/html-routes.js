@@ -29,8 +29,8 @@ module.exports = function(app) {
   });
 
   // loads the swyppa page
-  app.get("/swyppa", function(req, res) {
-    res.render("swyppa");
+  app.get("/list", function(req, res) {
+    res.render("list");
   });
 
   // loads the login page

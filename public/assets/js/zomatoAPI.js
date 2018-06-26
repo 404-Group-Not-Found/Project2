@@ -1,3 +1,5 @@
+import { FORMERR } from "dns";
+
 var keys = require("./keys.js");
 
 var zomato = require('zomato');
@@ -18,13 +20,13 @@ var Zomato = {
         });
     },
 
-    getCities: function () {
+    getCities: function (query, latitude, longitude, city_ids, count) {
         client.getCities({
-            q: "New Delhi", //query by city name 
-            lat: "28.613939", //latitude 
-            lon: "77.209021", //longitude 
-            city_ids: "1,2,3", //comma separated city_ids value 
-            count: "2" // number of maximum result to display 
+            q: query, //query by city name 
+            lat: latitude, //latitude 
+            lon: longitude, //longitude 
+            city_ids: city_ids, //comma separated city_ids value 
+            count: count // number of maximum result to display 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -34,12 +36,12 @@ var Zomato = {
         });
     },
 
-    getCollections: function () {
+    getCollections: function (city_ids, latitude, longitude, count) {
         client.getCollections({
-            city_id: "1", //id of the city for which collections are needed 
-            lat: "28.613939", //latitude 
-            lon: "77.209021", //longitude 
-            count: "2" // number of maximum result to display 
+            city_id: city_ids, //id of the city for which collections are needed 
+            lat: latitude, //latitude 
+            lon: longitude, //longitude 
+            count: count // number of maximum result to display 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -49,11 +51,11 @@ var Zomato = {
         });
     },
 
-    getCuisines: function () {
+    getCuisines: function (city_ids, latitude, longitude) {
         client.getCuisines({
-            city_id: "1", //id of the city for which collections are needed 
-            lat: "28.613939", //latitude 
-            lon: "77.209021" //longitude 
+            city_id: city_ids, //id of the city for which collections are needed 
+            lat: latitude, //latitude 
+            lon: longitude //longitude 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -63,11 +65,11 @@ var Zomato = {
         });
     },
 
-    getEstablishments: function () {
+    getEstablishments: function (city_id, latitude, longitude) {
         client.getEstablishments({
-            city_id: "1", //id of the city for which collections are needed 
-            lat: "28.613939", //latitude 
-            lon: "77.209021" //longitude 
+            city_id: city_id, //id of the city for which collections are needed 
+            lat: latitude, //latitude 
+            lon: longitude //longitude 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -90,10 +92,10 @@ var Zomato = {
         });
     },
 
-    getLocationDetails: function () {
+    getLocationDetails: function (entity_id, entity_type) {
         client.getLocationDetails({
-            entity_id: "36932", //location id obtained from locations api 
-            entity_type: "group" //location type obtained from locations api 
+            entity_id: entity_id, //location id obtained from locations api 
+            entity_type: entity_type //location type obtained from locations api 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -103,12 +105,12 @@ var Zomato = {
         });
     },
 
-    getLocations: function () {
+    getLocations: function (query, latitude, longitude, count) {
         client.getLocations({
-            query: "New Delhi", // suggestion for location name 
-            lat: "28.613939", //latitude 
-            lon: "77.209021", //longitude 
-            count: "2" // number of maximum result to fetch 
+            query: query, // suggestion for location name 
+            lat: latitude, //latitude 
+            lon: longitude, //longitude 
+            count: count // number of maximum result to fetch 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -118,9 +120,9 @@ var Zomato = {
         });
     },
 
-    getDailyMenu: function () {
+    getDailyMenu: function (restaurant_id) {
         client.getDailyMenu({
-            res_id: "9186" // id of restaurant whose details are requested 
+            res_id: restaurant_id // id of restaurant whose details are requested 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -130,9 +132,9 @@ var Zomato = {
         });
     },
 
-    getRestaurant: function () {
+    getRestaurant: function (restaurant_id) {
         client.getRestaurant({
-            res_id: "9186" // id of restaurant whose details are requested 
+            res_id: restaurant_id // id of restaurant whose details are requested 
         }, function (err, result) {
             if (!err) {
                 console.log(JSON.parse(result));
@@ -142,11 +144,11 @@ var Zomato = {
         });
     },
 
-    getReviews: function () {
+    getReviews: function (restaurant_id, start, count) {
         client.getReviews({
-            res_id: "9186", // id of restaurant whose details are requested 
-            start: "0", //fetch results after this offset (Integer) 
-            count: "5", //max number of results to retrieve
+            res_id: restaurant_id, // id of restaurant whose details are requested 
+            start: start, //fetch results after this offset (Integer) 
+            count: count, //max number of results to retrieve
 
         }, function (err, result) {
             if (!err) {
@@ -157,22 +159,22 @@ var Zomato = {
         });
     },
 
-    search: function () {
+    search: function (entity_id, entity_type, query, latitude, longitude, count, start, radius, cuisines, establishment_type, collection_id, category, sort, order) {
         client.search({
-            entity_id: "36932", //location id 
-            entity_type: "group", // location type (city,subzone,zone , landmark, metro,group) 
-            q: "Cafe", //Search Keyword 
-            lat: "28.613939", //latitude 
-            lon: "77.209021", //longitude 
-            count: "2", // number of maximum result to display 
-            start: "1", //fetch results after offset 
-            radius: "10000", //radius around (lat,lon); to define search area, defined in meters(M) 
-            cuisines: "3,7", //list of cuisine id's separated by comma 
-            establishment_type: "", //estblishment id obtained from establishments call 
-            collection_id: "29", //collection id obtained from collections call 
-            category: "9", //	category ids obtained from categories call 
-            sort: " cost,rating,real_distance", //choose any one out of these available choices 
-            order: "asc" //	used with 'sort' parameter to define ascending(asc )/ descending(desc) 
+            entity_id: entity_id, //location id 
+            entity_type: entity_type, // location type (city,subzone,zone , landmark, metro,group) 
+            q: query, //Search Keyword 
+            lat: latitude, //latitude 
+            lon: longitude, //longitude 
+            count: count, // number of maximum result to display 
+            start: start, //fetch results after offset 
+            radius: radius, //radius around (lat,lon); to define search area, defined in meters(M) 
+            cuisines: cuisines, //list of cuisine id's separated by comma 
+            establishment_type: establishment_type, //estblishment id obtained from establishments call 
+            collection_id: collection_id, //collection id obtained from collections call 
+            category: category, //	category ids obtained from categories call 
+            sort: sort, //choose any one out of these available choices 
+            order: order //	used with 'sort' parameter to define ascending(asc )/ descending(desc) 
 
         }, function (err, result) {
             if (!err) {

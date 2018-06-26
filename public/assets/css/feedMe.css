@@ -1,9 +1,9 @@
 
-#container {
+#swipe-container {
     width: 500px;
     margin: auto !important;
     display: block;
-    height: 500px;
+    
     position: relative;
     list-style-type: none;
     -webkit-touch-callout: none;
@@ -14,22 +14,16 @@
     user-select: none;
   }
   .buddy {
-    display: none;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     color: #fff;
-    padding: 20px;
     width: 360px;
     height: 360px;
     top: 50px;
     left: 50px;
     position: absolute;
     cursor: hand;
-  }
-
-  .visible {
-      display:block;
   }
 
   .rotate-left {
@@ -83,3 +77,19 @@
     left: 40px;
     text-shadow: none;
   }
+
+  .ui-textinput.ui-corner-all.ui-shadow-inset.ui-textinput-text.ui-body-inherit {
+    background: transparent;
+ }
+
+ .ui-loader-icon.ui-icon-loading {
+  background-color: #00000005;
+ }
+
+ .ui-loader.ui-corner-all.ui-loader-default.ui-body-a {
+   background: transparent;
+ }
+
+ .ui-loader-header {
+   background: transparent;
+ }

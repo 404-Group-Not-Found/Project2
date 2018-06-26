@@ -1,20 +1,53 @@
 $(document).ready(function() {
-    var pullNextImage = function() {
-        // pull next image URL from API
-        var nextImgURL = "https://1.bp.blogspot.com/_qEbjiFbQWGM/TCBVlN3mkYI/AAAAAAAADCM/7CjYqUHwbgY/s1600/workshop_modell_0126.jpg";
+    // some hard coded images--these will come from the API instead of being hardcoded here
+    var current = 0;
+    var nextImgURLs = [
+        "/assets/img/chinese1.jpg",
+        "/assets/img/chinese2.jpg",
+        "/assets/img/chinese3.jpg",
+        "/assets/img/chinese4.jpg",
+        "/assets/img/thai1.png",
+        "/assets/img/thai2.jpg"
 
-        // use JQuery to create .buddy div with image element inside of it and place on DOM
-        
+    ];
+
+    var pullNextImage = function(numToPull) {
+        // loop numToPull to get that many new images
+
+        for (var i = 0; i < numToPull; i++) {
+
+            // instead of using setTimeout and getting the img URL from the hardcoded array of nextImgURLs, you'll get the image from your API
+            setTimeout(function(){
+                /* REPLACE CODE BELOW HERE */
+                if (current > 5) {
+                    return;
+                }
+                nextImgURL = nextImgURLs[current];
+                current++;
+                 /* REPLACE CODE ABOVE HERE */
+    
+                // Once you have the next image's URL you can call addTinderCard to create a new tinder card for it
+                var newSwipableCard = addTinderCard(nextImgURL);
+
+                // You can set data on the newSwipableCard if you want
+                newSwipableCard.attr("data-id", 10);
+                
+            }, 100);
+        }
     }
 
+    // create the first three cards
+    pullNextImage(3);
+
+    // initTinder to make the cards swipable
     initTinder(function(liked, element){
-        // Handle like or dislike of image
+        // Handle like or dislike of image however you want
         console.log("Liked?", liked, $(element).data("id"));
 
-        pullNextImage();
+        // add another card
+        pullNextImage(1);
     });
 
-    pullNextImage();
 })
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
