@@ -17,12 +17,13 @@
   },
   "homepage": "https://github.com/404-Group-Not-Found/Project2#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
-    "mysql2": "^1.5.1",
-    "sequelize": "^4.31.1",
+    "hoek": "^4.2.1",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0",
     "zomato": "^1.1.0"
   }
 }
