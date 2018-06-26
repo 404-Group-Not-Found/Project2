@@ -1,0 +1,42 @@
+{
+  "name": "project2",
+  "version": "1.0.0",
+  "description": "-A restaurant comparison Web App based in Node, Express and MySQL.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/404-Group-Not-Found/Project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/404-Group-Not-Found/Project2/issues"
+  },
+  "homepage": "https://github.com/404-Group-Not-Found/Project2#readme",
+  "dependencies": {
+<<<<<<< HEAD
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "hoek": "^4.2.1",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0",
+=======
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "mocha": "^5.0.0",
+    "mysql2": "^1.5.1",
+    "require": "^2.4.20",
+    "sequelize": "^4.31.1",
+>>>>>>> 8f35d5064e212827f553bc3c2e7cb2348f908ac3
+    "zomato": "^1.1.0"
+  }
+}
